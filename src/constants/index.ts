@@ -97,3 +97,103 @@ export const PORTAL_STEPS: PortalItem[] = [
     desc: "Your appointment will be confirmed upon receiving a call from our Care Coordinator",
   },
 ];
+
+export const FOOTER_SERVICES = [
+  {
+    title: "About Us",
+    services: [
+      {
+        label: "Vision and Values",
+        url: "#",
+      },
+      {
+        label: "Partners",
+        url: "#",
+      },
+      {
+        label: "Media",
+        url: "#",
+      },
+      {
+        label: "Data Security and Trust",
+        url: "#",
+      },
+      {
+        label: "Join Us",
+        url: "#",
+      },
+      {
+        label: "Contact Us",
+        url: "#",
+      },
+    ],
+  },
+  {
+    title: "Our Services",
+    services: [
+      {
+        label: "Home Nursing",
+        url: "#",
+      },
+      {
+        label: "Home Caregiving",
+        url: "#",
+      },
+      {
+        label: "Home Medical",
+        url: "#",
+      },
+      {
+        label: "COVID-19",
+        url: "#",
+      },
+    ],
+  },
+  {
+    title: "Jaga Career",
+    services: [
+      {
+        label: "Nurses",
+        url: "#",
+      },
+      {
+        label: "Care Aides",
+        url: "#",
+      },
+      {
+        label: "Doctors",
+        url: "#",
+      },
+    ],
+  },
+  {
+    title: "Jaga Guides",
+    services: [
+      {
+        label: "Health Resources",
+        url: "#",
+      },
+      {
+        label: "Finance Resources",
+        url: "#",
+      },
+      {
+        label: "Care Issue",
+        url: "#",
+      },
+    ],
+  },
+  {
+    title: "COVID-19",
+    services: [
+      {
+        label: "Pre-Event Testing",
+        url: "#",
+      },
+      {
+        label: "Home Swab/Serology Test",
+        url: "#",
+      },
+    ],
+  },
+];

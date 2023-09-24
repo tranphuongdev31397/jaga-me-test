@@ -1,0 +1,10 @@
+.dots__jaga {
+  display: inline-block;
+  vertical-align: middle;
+  margin: auto;
+  padding: 0;
+  background: #bfbfbf;
+  border-radius: 40px;
+  width: 22px;
+  text-align: center;
+}

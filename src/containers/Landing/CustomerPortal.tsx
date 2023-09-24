@@ -8,7 +8,7 @@ export interface CustomerPortalProps {}
 
 export default function CustomerPortal(props: CustomerPortalProps) {
   return (
-    <div className="portal bg-gray-3 py-[120px]">
+    <div className="portal bg-gray-3 pt-[120px] pb-[235px]">
       <Title title="Customer Portal" />
 
       <div className="portal__container mt-5 justify-center container flex flex-col lg:flex-row gap-10 items-center">

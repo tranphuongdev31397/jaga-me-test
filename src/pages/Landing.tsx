@@ -1,9 +1,15 @@
 import { Navbar } from "@/containers/Landing";
+import AwardWinning from "@/containers/Landing/AwardWinning";
 import Booking from "@/containers/Landing/Booking";
 import CustomerPortal from "@/containers/Landing/CustomerPortal";
+import Footer from "@/containers/Landing/Footer";
 import Hero from "@/containers/Landing/Hero";
+import Jagas from "@/containers/Landing/Jagas";
 import OutServices from "@/containers/Landing/OurServices";
+import Partner from "@/containers/Landing/Partner";
+import Testimonials from "@/containers/Landing/Testimonials";
 import { useTheme } from "@/contexts/shadcn/theme-provider";
+
 import { useEffect } from "react";
 
 export interface LandingPageProps {}
@@ -21,7 +27,7 @@ export default function LandingPage({}: LandingPageProps) {
         <Navbar />
       </header>
 
-      <main className="w-full">
+      <main className="w-full bg-gray-3">
         <Hero />
 
         <OutServices />
@@ -29,9 +35,16 @@ export default function LandingPage({}: LandingPageProps) {
         <Booking />
 
         <CustomerPortal />
+        <Jagas />
+
+        <Partner />
+        <Testimonials />
+        <AwardWinning />
       </main>
 
-      <footer className="bg-white"></footer>
+      <footer className="bg-gray-3 pt-[200px]">
+        <Footer />
+      </footer>
     </div>
   );
 }

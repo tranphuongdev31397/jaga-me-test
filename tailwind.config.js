@@ -50,7 +50,7 @@ module.exports = {
       },
       boxShadow: {
         service: "10px 40px 50px 0px rgba(229, 233, 246, 0.40)",
-        "groups-sidebar": "-30px 0px 60px 0px rgba(28, 28, 31, 0.50)",
+        default: "0px 4px 4px 0px rgba(0, 0, 0, 0.25);",
       },
       keyframes: {
         "accordion-down": {
