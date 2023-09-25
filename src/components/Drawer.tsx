@@ -1,20 +1,40 @@
-import React, { ReactNode } from "react";
+import { cn } from "@/lib/utils";
+import React, { ReactNode, useEffect } from "react";
 
 export interface DrawerDrops {
   children: ReactNode;
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
+  className?: string;
 }
 
-export default function Drawer({ children, isOpen, setIsOpen }: DrawerDrops) {
+export default function Drawer({
+  children,
+  isOpen,
+  setIsOpen,
+  className,
+}: DrawerDrops) {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isOpen]);
+
   return (
     <main
-      className={
-        " fixed overflow-hidden z-10 bg-gray-900 bg-opacity-25 inset-0 transform ease-in-out " +
-        (isOpen
+      className={cn(
+        " fixed overflow-hidden z-[1000000] bg-gray-900 bg-opacity-25 inset-0 transform ease-in-out ",
+        isOpen
           ? " transition-opacity opacity-100 duration-500 translate-x-0  "
-          : " transition-all delay-500 opacity-0 translate-x-full  ")
-      }
+          : " transition-all delay-500 opacity-0 translate-x-full  ",
+        className
+      )}
     >
       <section
         className={
@@ -23,7 +43,6 @@ export default function Drawer({ children, isOpen, setIsOpen }: DrawerDrops) {
         }
       >
         <article className="relative w-screen max-w-lg pb-10 flex flex-col space-y-6 overflow-y-scroll h-full">
-          <header className="p-4 font-bold text-lg">Header</header>
           {children}
         </article>
       </section>

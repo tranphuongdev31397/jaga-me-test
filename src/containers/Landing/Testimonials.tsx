@@ -3,13 +3,16 @@ import { Image } from "@/components/Image";
 import Title from "@/components/Title";
 import { cn } from "@/lib/utils";
 import * as React from "react";
-import Slider, { Settings } from "react-slick";
+import Slider, { type Settings } from "react-slick";
+
 export interface TestimonialsProps {}
 
 export default function Testimonials(props: TestimonialsProps) {
   const [active, setActive] = React.useState({
-    currentSlideIndex: 0,
+    currentSlideIndex: 1,
   });
+
+  const ref = React.useRef<any>();
   const settings: Settings = {
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -20,6 +23,7 @@ export default function Testimonials(props: TestimonialsProps) {
       setActive({ currentSlideIndex: next });
     },
     infinite: false,
+    initialSlide: 1,
     responsive: [
       {
         breakpoint: 1240,
@@ -35,11 +39,16 @@ export default function Testimonials(props: TestimonialsProps) {
       },
     ],
   };
+
+  // React.useEffect(() => {
+  //   console.log(ref);
+  // }, [ref.current]);
+
   return (
     <div className="bg-light-1 pt-[100px] pb-[240px]">
       <Title title="Testimonials" />
       <div className="mt-[45px]">
-        <Slider className="my-[20px]" {...settings}>
+        <Slider ref={ref} className="my-[20px]" {...settings}>
           <div className="">
             <TestimonialItem
               title="It is a service I highly recommend to others"
@@ -48,6 +57,7 @@ export default function Testimonials(props: TestimonialsProps) {
               active={active.currentSlideIndex === 0}
             />
           </div>
+
           <div>
             <TestimonialItem
               title="It is a service I highly recommend to others"
