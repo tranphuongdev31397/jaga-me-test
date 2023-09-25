@@ -34,7 +34,7 @@ export default function Testimonials({}: TestimonialsProps) {
       {
         breakpoint: 1024,
         settings: {
-          centerPadding: "10%",
+          centerPadding: "12%",
         },
       },
 
@@ -52,36 +52,30 @@ export default function Testimonials({}: TestimonialsProps) {
   // }, [ref.current]);
 
   return (
-    <div className="bg-light-1 pt-[100px] pb-[240px]">
+    <div className="bg-light-1 pt-[100px] pb-[240px] ">
       <Title title="Testimonials" />
       <div className="mt-[45px]">
-        <Slider ref={ref} className="my-[20px]" {...settings}>
-          <div className="">
-            <TestimonialItem
-              title="Courteous and helpful"
-              desc="Respond team v courteous. Booking last minutes also no complain. Would go ahead to try to fulfill need. My father in law Mr Lee, 91 years old, is wheelchair bound and heavy over 100 kilo. Helper always try their best to fulfill needs. This arrangement allows my Cambodia helper to relax and refocus on her duties upon return. Saves a lot. With gratitude,"
-              author={"Robin Tan"}
-              active={active.currentSlideIndex === 0}
-            />
-          </div>
+        <Slider ref={ref} className="my-[20px] overflow-x-hidden" {...settings}>
+          <TestimonialItem
+            title="Courteous and helpful"
+            desc="Respond team v courteous. Booking last minutes also no complain. Would go ahead to try to fulfill need. My father in law Mr Lee, 91 years old, is wheelchair bound and heavy over 100 kilo. Helper always try their best to fulfill needs. This arrangement allows my Cambodia helper to relax and refocus on her duties upon return. Saves a lot. With gratitude,"
+            author={"Robin Tan"}
+            active={active.currentSlideIndex === 0}
+          />
 
-          <div>
-            <TestimonialItem
-              title="Highly recommended"
-              desc="Very responsive, able to fulfil every request that was put up. Caregivers were really nice & patient, providing us with the relevant knowledge."
-              author={"AiTing Lai"}
-              active={active.currentSlideIndex === 1}
-            />
-          </div>
+          <TestimonialItem
+            title="Highly recommended"
+            desc="Very responsive, able to fulfil every request that was put up. Caregivers were really nice & patient, providing us with the relevant knowledge."
+            author={"AiTing Lai"}
+            active={active.currentSlideIndex === 1}
+          />
 
-          <div>
-            <TestimonialItem
-              title="It is a service I highly recommend to others"
-              desc="All we wanted was for the best medical attention for our mother, and her complete recovery. The most important factor in decision-making for us was the experience of nurses to handle the illnesses of the patient and their age. The nurses at Jaga-Me are kind and caring. It is a service I highly recommend to others in the same situation”"
-              author={"Katherine"}
-              active={active.currentSlideIndex === 2}
-            />
-          </div>
+          <TestimonialItem
+            title="It is a service I highly recommend to others"
+            desc="All we wanted was for the best medical attention for our mother, and her complete recovery. The most important factor in decision-making for us was the experience of nurses to handle the illnesses of the patient and their age. The nurses at Jaga-Me are kind and caring. It is a service I highly recommend to others in the same situation”"
+            author={"Katherine"}
+            active={active.currentSlideIndex === 2}
+          />
         </Slider>
       </div>
     </div>
@@ -102,7 +96,7 @@ const TestimonialItem = ({
   return (
     <div
       className={cn(
-        "mx-auto gap-[25px] items-center rounded-[20px]  md:h-[400px] md:max-w-[640px]  aspect-[3/4]    xxs:aspect-[640/400]   shadow-default bg-light-1 px-[25px] py-[45px] my-2.5",
+        "mx-auto gap-[25px] items-center rounded-[20px]  md:h-[400px] md:max-w-[600px]  aspect-[3/4]   xxs:aspect-[640/400]   shadow-default bg-light-1 px-[25px] py-[45px] my-2.5",
         !active ? "grayscale opacity-50" : ""
       )}
     >
