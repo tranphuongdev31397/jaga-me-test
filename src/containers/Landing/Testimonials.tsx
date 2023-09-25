@@ -37,6 +37,13 @@ export default function Testimonials(props: TestimonialsProps) {
           centerPadding: "10%",
         },
       },
+
+      {
+        breakpoint: 768,
+        settings: {
+          centerPadding: "5%",
+        },
+      },
     ],
   };
 
@@ -51,21 +58,22 @@ export default function Testimonials(props: TestimonialsProps) {
         <Slider ref={ref} className="my-[20px]" {...settings}>
           <div className="">
             <TestimonialItem
-              title="It is a service I highly recommend to others"
-              desc="All we wanted was for the best medical attention for our mother, and her complete recovery. The most important factor in decision-making for us was the experience of nurses to handle the illnesses of the patient and their age. The nurses at Jaga-Me are kind and caring. It is a service I highly recommend to others in the same situation”"
-              author={"Katherine"}
+              title="Courteous and helpful"
+              desc="Respond team v courteous. Booking last minutes also no complain. Would go ahead to try to fulfill need. My father in law Mr Lee, 91 years old, is wheelchair bound and heavy over 100 kilo. Helper always try their best to fulfill needs. This arrangement allows my Cambodia helper to relax and refocus on her duties upon return. Saves a lot. With gratitude,"
+              author={"Robin Tan"}
               active={active.currentSlideIndex === 0}
             />
           </div>
 
           <div>
             <TestimonialItem
-              title="It is a service I highly recommend to others"
-              desc="All we wanted was for the best medical attention for our mother, and her complete recovery. The most important factor in decision-making for us was the experience of nurses to handle the illnesses of the patient and their age. The nurses at Jaga-Me are kind and caring. It is a service I highly recommend to others in the same situation”"
-              author={"Katherine"}
+              title="Highly recommended"
+              desc="Very responsive, able to fulfil every request that was put up. Caregivers were really nice & patient, providing us with the relevant knowledge."
+              author={"AiTing Lai"}
               active={active.currentSlideIndex === 1}
             />
           </div>
+
           <div>
             <TestimonialItem
               title="It is a service I highly recommend to others"
@@ -94,20 +102,24 @@ const TestimonialItem = ({
   return (
     <div
       className={cn(
-        "mx-auto gap-[25px] items-center rounded-[20px] h-[400px] max-w-[640px]  shadow-default bg-light-1 px-[25px] py-[45px] my-2.5",
+        "mx-auto gap-[25px] items-center rounded-[20px]  md:h-[400px] md:max-w-[640px]  aspect-[3/4]    xxs:aspect-[640/400]   shadow-default bg-light-1 px-[25px] py-[45px] my-2.5",
         !active ? "grayscale opacity-50" : ""
       )}
     >
       <div className="text-center flex flex-col justify-between h-full">
-        <h3 className="text-2xl/[26px] text-gray-1 font-bold">{title}</h3>
-        <p className="text-gray-2 text-lg">{desc}</p>
+        <h3 className="text-xl md:text-2xl/[26px] text-gray-1 font-bold">
+          {title}
+        </h3>
+        <p className="text-gray-2 text-xs md:text-lg">{desc}</p>
 
         <Image
           src={SVGS.stars}
-          className="max-w-[177px] h-auto w-full object-contain mx-auto"
+          className="max-w-[100px] md:max-w-[177px] h-auto w-full object-contain mx-auto"
         />
 
-        <h3 className="text-[32px]/[35px] text-gray-1 font-bold">{author}</h3>
+        <h3 className="text-xl md:text-[32px]/[35px] text-gray-1 font-bold">
+          {author}
+        </h3>
       </div>
     </div>
   );
