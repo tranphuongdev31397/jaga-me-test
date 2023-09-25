@@ -1,7 +1,6 @@
 import { IMAGES } from "@/assets";
 import { Image } from "@/components/Image";
 import Title from "@/components/Title";
-import * as React from "react";
 
 export interface AwardWinningProps {}
 
@@ -28,7 +27,7 @@ const AWARDS = [
   },
 ];
 
-export default function AwardWinning(props: AwardWinningProps) {
+export default function AwardWinning({}: AwardWinningProps) {
   return (
     <div className="award bg-light-1">
       <div className="flex flex-col gap-[45px] container">

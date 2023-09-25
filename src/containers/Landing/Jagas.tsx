@@ -42,7 +42,7 @@ export default function Jagas({}: JagasProps) {
         </ul>
       );
     },
-    beforeChange: (prev: any, next: any) => {
+    beforeChange: (_, next: any) => {
       // here to detect slide change
       setActive({ currentSlideIndex: next });
     },

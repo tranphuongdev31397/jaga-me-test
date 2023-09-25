@@ -1,10 +1,9 @@
-import "react-lazy-load-image-component/src/effects/blur.css";
+import { cn } from "@/lib/utils";
 import {
   LazyLoadImage,
   type LazyLoadImageProps,
 } from "react-lazy-load-image-component";
-import { cn } from "@/lib/utils";
-import { forwardRef } from "react";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 interface ImageProps extends LazyLoadImageProps {}
 

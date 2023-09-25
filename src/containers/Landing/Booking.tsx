@@ -2,7 +2,6 @@ import { Image } from "@/components/Image";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
 import { BOOKINGS } from "@/constants";
-import * as React from "react";
 
 export interface Bookingrops {}
 

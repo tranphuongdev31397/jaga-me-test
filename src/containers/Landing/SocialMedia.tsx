@@ -1,9 +1,7 @@
-import * as React from "react";
-
 export interface SocialMediaProps {
   className?: string;
 }
 
-export default function SocialMedia(props: SocialMediaProps) {
+export default function SocialMedia({}: SocialMediaProps) {
   return <div></div>;
 }

@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import React, { ReactNode, useEffect } from "react";
+import { ReactNode, useEffect } from "react";
 
 export interface DrawerDrops {
   children: ReactNode;

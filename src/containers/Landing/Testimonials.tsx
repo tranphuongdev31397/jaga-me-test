@@ -7,7 +7,7 @@ import Slider, { type Settings } from "react-slick";
 
 export interface TestimonialsProps {}
 
-export default function Testimonials(props: TestimonialsProps) {
+export default function Testimonials({}: TestimonialsProps) {
   const [active, setActive] = React.useState({
     currentSlideIndex: 1,
   });
@@ -18,7 +18,7 @@ export default function Testimonials(props: TestimonialsProps) {
     slidesToScroll: 1,
     centerPadding: "25%",
     centerMode: true,
-    beforeChange: (prev: any, next: any) => {
+    beforeChange: (_, next: any) => {
       // here to detect slide change
       setActive({ currentSlideIndex: next });
     },

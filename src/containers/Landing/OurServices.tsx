@@ -14,7 +14,7 @@ export interface ServiceItemProps {
   service: Service;
 }
 
-export default function OutServices(props: OutServicesProps) {
+export default function OutServices({}: OutServicesProps) {
   return (
     <section className="bg-gray-3 pt-[60px] pb-[215px] relative z-10 ">
       <div className="flex flex-col gap-[45px] container">

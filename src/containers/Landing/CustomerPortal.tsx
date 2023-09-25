@@ -2,11 +2,10 @@ import { IMAGES, SVGS } from "@/assets";
 import { Image } from "@/components/Image";
 import Title from "@/components/Title";
 import { PORTAL_STEPS } from "@/constants";
-import * as React from "react";
 
 export interface CustomerPortalProps {}
 
-export default function CustomerPortal(props: CustomerPortalProps) {
+export default function CustomerPortal({}: CustomerPortalProps) {
   return (
     <div className="portal bg-gray-3 pt-[120px] pb-[235px]">
       <Title title="Customer Portal" />

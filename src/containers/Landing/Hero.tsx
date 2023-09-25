@@ -2,11 +2,11 @@ import { IMAGES } from "@/assets";
 import { Image } from "@/components/Image";
 import { Button } from "@/components/ui/button";
 import { useViewport } from "@/contexts/ViewportProvider";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 
 export interface HeroProps {}
 
-export default function Hero(props: HeroProps) {
+export default function Hero({}: HeroProps) {
   const ref = useRef<any>(null);
 
   const { width } = useViewport();

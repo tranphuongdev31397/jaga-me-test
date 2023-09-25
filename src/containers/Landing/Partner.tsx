@@ -2,7 +2,6 @@ import { IMAGES, SVGS } from "@/assets";
 import { Image } from "@/components/Image";
 import Title from "@/components/Title";
 import { Button } from "@/components/ui/button";
-import * as React from "react";
 
 export interface PartnerProps {}
 
@@ -45,7 +44,7 @@ const PARTNERS = [
   },
 ];
 
-export default function Partner(props: PartnerProps) {
+export default function Partner({}: PartnerProps) {
   return (
     <div className="partner bg-white relative z-10 py-[140px]">
       <div className="relative z-10 container flex justify-center flex-col gap-[35px]">
